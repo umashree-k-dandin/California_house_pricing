@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>California House Price Prediction</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 500px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>California House Price Prediction</h1>
+
+    <form action="/predict" method="POST">
+
+        <div class="form-group">
+            <label for="MedInc">Median Income (MedInc)</label>
+            <input type="number"
+                   step="any"
+                   name="MedInc"
+                   id="MedInc"
+                   placeholder="Example: 2.0817"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label for="HouseAge">House Age</label>
+            <input type="number"
+                   step="any"
+                   name="HouseAge"
+                   id="HouseAge"
+                   placeholder="Example: 41"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label for="AveRooms">Average Rooms</label>
+            <input type="number"
+                   step="any"
+                   name="AveRooms"
+                   id="AveRooms"
+                   placeholder="Example: 2.2724"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label for="AveBedrms">Average Bedrooms</label>
+            <input type="number"
+                   step="any"
+                   name="AveBedrms"
+                   id="AveBedrms"
+                   placeholder="Example: 1.0034"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label for="Population">Population</label>
+            <input type="number"
+                   step="any"
+                   name="Population"
+                   id="Population"
+                   placeholder="Example: 1224"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label for="AveOccup">Average Occupancy</label>
+            <input type="number"
+                   step="any"
+                   name="AveOccup"
+                   id="AveOccup"
+                   placeholder="Example: 4.2207"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label for="Latitude">Latitude</label>
+            <input type="number"
+                   step="any"
+                   name="Latitude"
+                   id="Latitude"
+                   placeholder="Example: 34.04"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label for="Longitude">Longitude</label>
+            <input type="number"
+                   step="any"
+                   name="Longitude"
+                   id="Longitude"
+                   placeholder="Example: -118.29"
+                   required>
+        </div>
+
+        <button type="submit">Predict House Price</button>
+
+    </form>
+
+</div>
+{{prediction_text}}
+</body>
+</html>
+```
